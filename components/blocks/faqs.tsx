@@ -14,28 +14,37 @@ export default function Faqs() {
             <div className="w-full md:w-1/2 space-y-8">
               {/* Item */}
               <div className="space-y-2">
-                <h4 className="text-xl font-bold">How can I add money to my account?</h4>
+                <h4 className="text-xl font-bold">
+                  How can I add money to my account?
+                </h4>
                 <p className="text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
-                  ad minim veniam.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
                 </p>
               </div>
 
               {/* Item */}
               <div className="space-y-2">
-                <h4 className="text-xl font-bold">How is my document data stored/secured?</h4>
+                <h4 className="text-xl font-bold">
+                  How is my document data stored/secured?
+                </h4>
                 <p className="text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
-                  ad minim veniam.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
                 </p>
               </div>
 
               {/* Item */}
               <div className="space-y-2">
-                <h4 className="text-xl font-bold">I do not want to pay now, how can I proceed?</h4>
+                <h4 className="text-xl font-bold">
+                  I do not want to pay now, how can I proceed?
+                </h4>
                 <p className="text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
-                  ad minim veniam.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
                 </p>
               </div>
             </div>
@@ -44,28 +53,37 @@ export default function Faqs() {
             <div className="w-full md:w-1/2 space-y-8">
               {/* Item */}
               <div className="space-y-2">
-                <h4 className="text-xl font-bold">How do I get started with card payments?</h4>
+                <h4 className="text-xl font-bold">
+                  How do I get started with card payments?
+                </h4>
                 <p className="text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
-                  ad minim veniam.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
                 </p>
               </div>
 
               {/* Item */}
               <div className="space-y-2">
-                <h4 className="text-xl font-bold">Can I get a standard card for free?</h4>
+                <h4 className="text-xl font-bold">
+                  Can I get a standard card for free?
+                </h4>
                 <p className="text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
-                  ad minim veniam.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
                 </p>
               </div>
 
               {/* Item */}
               <div className="space-y-2">
-                <h4 className="text-xl font-bold">I don't have the required documents, how can I proceed?</h4>
+                <h4 className="text-xl font-bold">
+                  I don&apos;t have the required documents, how can I proceed?
+                </h4>
                 <p className="text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim
-                  ad minim veniam.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+                  ut enim ad minim veniam.
                 </p>
               </div>
             </div>
@@ -73,5 +91,5 @@ export default function Faqs() {
         </div>
       </div>
     </section>
-  )
+  );
 }

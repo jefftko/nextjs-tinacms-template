@@ -7,7 +7,8 @@
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c \"next dev\"",
     "build": "tinacms build --partial-reindex && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

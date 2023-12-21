@@ -1,46 +1,46 @@
 /* Typography */
 .h1 {
-    @apply text-5xl font-bold;
+  @apply text-5xl font-bold;
 }
 
 .h2 {
-    @apply text-4xl font-bold;
+  @apply text-4xl font-bold;
 }
 
 .h3 {
-    @apply text-3xl font-bold;
+  @apply text-3xl font-bold;
 }
 
 .h4 {
-    @apply text-2xl font-bold;
+  @apply text-2xl font-bold;
 }
 
 @screen md {
-    .h1 {
-        @apply text-6xl;
-    }
+  .h1 {
+    @apply text-6xl;
+  }
 
-    .h2 {
-        @apply text-5xl;
-    }
+  .h2 {
+    @apply text-5xl;
+  }
 
-    .h3 {
-        @apply text-4xl;
-    }
+  .h3 {
+    @apply text-4xl;
+  }
 }
 
 /* Buttons */
 .btn,
 .btn-sm {
-    @apply text-[15px] font-[550] inline-flex items-center justify-center rounded-full leading-5 whitespace-nowrap transition duration-150 ease-in-out;
+  @apply text-[15px] font-[550] inline-flex items-center justify-center rounded-full leading-5 whitespace-nowrap transition duration-150 ease-in-out;
 }
 
 .btn {
-    @apply px-5 py-2.5;
+  @apply px-5 py-2.5;
 }
 
 .btn-sm {
-    @apply px-4 py-2;
+  @apply px-4 py-2;
 }
 
 /* Forms */
@@ -57,7 +57,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-select,
 .form-checkbox,
 .form-radio {
-    @apply bg-white border border-slate-200 focus:border-blue-500;
+  @apply bg-white border border-slate-200 focus:border-blue-500;
 }
 
 .form-input,
@@ -65,38 +65,38 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-multiselect,
 .form-select,
 .form-checkbox {
-    @apply rounded;
+  @apply rounded;
 }
 
 .form-input,
 .form-textarea,
 .form-multiselect,
 .form-select {
-    @apply text-sm px-3 py-2;
+  @apply text-sm px-3 py-2;
 }
 
 .form-input,
 .form-textarea {
-    @apply placeholder-slate-400;
+  @apply placeholder-slate-400;
 }
 
 .form-select {
-    @apply pr-10;
+  @apply pr-10;
 }
 
 .form-checkbox,
 .form-radio {
-    @apply text-blue-500 border-2 rounded-sm;
+  @apply text-blue-500 border-2 rounded-sm;
 }
 
 /* Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .no-scrollbar {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
