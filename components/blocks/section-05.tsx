@@ -29,9 +29,11 @@ export default function Section05() {
                 <div className="relative">
                   <Image
                     className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none -z-10 max-w-none mix-blend-lighten"
-                    src={LogosIllustration}
+                    src={`images/logos-illustration.svg`}
                     alt="Logos illustration"
                     aria-hidden="true"
+                    width={594}
+                    height={639}
                   />
                   <Image src={Logos} width={720} height={283} alt="Logos" />
                 </div>

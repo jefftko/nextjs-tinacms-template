@@ -66,7 +66,9 @@ export default function Section02() {
                 <div className="relative -mx-16 md:mx-0">
                   <Image
                     className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 mt-16 md:mt-0 pointer-events-none -z-10 max-w-none mix-blend-lighten"
-                    src={CardsIllustration}
+                    src={`images/cards-illustration.svg`}
+                    height={742}
+                    width={752}
                     alt="Cards illustration"
                     aria-hidden="true"
                   />
