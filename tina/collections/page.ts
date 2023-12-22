@@ -4,7 +4,7 @@ export const PageCollection: Collection = {
   name: "page",
   label: "Page",
   path: "content/pages",
-  format: "md",
+  format: "mdx",
   ui: {
     router: () => "/",
   },
