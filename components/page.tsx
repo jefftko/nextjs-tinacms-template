@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import type { Pages } from "../tina/__generated__/types";
+import type { PageQuery, PageBlocks} from "@/tina/__generated__/types";
 
 import Hero from "@/components/blocks/hero";
 import Section01 from "@/components/blocks/section-01";
@@ -12,66 +12,62 @@ import Section05 from "@/components/blocks/section-05";
 import Section06 from "@/components/blocks/section-06";
 import Section07 from "@/components/blocks/section-07";
 
+import { tinaField, useTina } from "tinacms/dist/react";
 
-export const PageComponent = (props: Pages) => {
+
+export const PageComponent = (props: {
+  data: PageQuery;
+  variables: object;
+  query: string;
+}) => {
+    const { data } = useTina(props);
     return ( 
         <>
-      {props.blocks
-        ? props.blocks.map(function (block, i) {
-            switch (block.__typename) {
-              case 'PagesBlocksHero':
-                return (
-                  <React.Fragment key={i + block.__typename}>
-                    <Hero data={block} />
-                  </React.Fragment>
+         {data.page.blocks ? data.page.blocks.map(function (block, i) {
+             if (!block) return null
+            return (
+                <div key={i + block.__typename} data-tina-field={tinaField(block)}>
+                    <Block {...block} />
+                </div>
                 )
-              case 'PagesBlocksSection01':
-                return (
-                  <React.Fragment key={i + block.__typename}>
-                    <Section01 data={block} />
-                  </React.Fragment>
-                )
-            case 'PagesBlocksSection02':
-                return (
-                    <React.Fragment key={i + block.__typename}>
-                     <Section02 data={block} />
-                     </React.Fragment>
-                    )
-            case 'PagesBlocksSection03':
-                return (
-                    <React.Fragment key={i + block.__typename}>
-                     <Section03 data={block} />
-                     </React.Fragment>
-                    )
-            case 'PagesBlocksSection04':
-                return (
-                    <React.Fragment key={i + block.__typename}>
-                    <Section04 data={block} />
-                    </React.Fragment>
-                    )
-            case 'PagesBlocksSection05':
-                return (
-                    <React.Fragment key={i + block.__typename}>
-                    <Section05 data={block} />
-                    </React.Fragment>
-                    )
-            case 'PagesBlocksSection06':
-                return (
-                    <React.Fragment key={i + block.__typename}>
-                    <Section06 data={block} />
-                    </React.Fragment>
-                    )
-            case 'PagesBlocksSection07':
-                return (
-                    <React.Fragment key={i + block.__typename}>
-                    <Section07 data={block} />
-                    </React.Fragment>
-                    )
-            default:
-                return null
-            }
           })
         : null}
     </>
   )
 }
+
+const Block = (block: PageBlocks) => {
+    console.log('blockname',block.__typename)
+    switch (block.__typename) {
+              case 'PageBlocksHero':
+                return <Hero data={block} />
+            /*  case 'PageBlocksSection01':
+                return <Section01 data={block} />
+            case 'PageBlocksSection02':
+                return (
+                     <Section02 data={block} />
+                    )
+            case 'PageBlocksSection03':
+                return (
+                     <Section03 data={block} />
+                    )
+            case 'PageBlocksSection04':
+                return (
+                    <Section04 data={block} />
+                    )
+            case 'PageBlocksSection05':
+                return (
+                    <Section05 data={block} />
+                    )
+            case 'PageBlocksSection06':
+                return (
+                    <Section06 data={block} />
+                    )
+            case 'PageBlocksSection07':
+                return (
+                    <Section07 data={block} />
+                    )*/
+            default:
+                return null
+            }
+};

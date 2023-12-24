@@ -24,7 +24,8 @@
       "@/app/*": ["./app/*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
-      "@/public/*": ["./public/*"]
+      "@/public/*": ["./public/*"],
+      "@/tina/*": ["./tina/*"]
     }
   },
   "exclude": ["node_modules"],

@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import HeroImage from "@/public/images/hero-image.png";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import type { TinaTemplate } from "tinacms";
+import { PageBlocksHero } from "@/tina/__generated__/types";
+import { tinaField } from "tinacms/dist/react";
 
-export default function Hero() {
+
+export default function Hero({ data }: { data: PageBlocksHero }) {
   return (
     <section className="relative">
       {/* Bg */}
@@ -16,15 +20,17 @@ export default function Hero() {
           {/* Hero content */}
           <div className="relative max-w-xl mx-auto md:max-w-none text-center md:text-left">
             {/* Content */}
-            <div className="md:w-[600px]">
+            <div className="md:w-[600px]" >
               {/* Copy */}
-              <h1
+              {data.headline && (
+ <h1
                 className="h1 text-white mb-6"
                 data-aos="fade-up"
                 data-aos-delay="100"
+                data-tina-field={tinaField(data, "headline")}
               >
-                Create physical and virtual cards for your{" "}
-                <span className="relative inline-flex items-center justify-center">
+               {data.headline}
+                <span className="relative inline-flex items-center justify-center" data-tina-field={tinaField(data, "tag")}>
                   <svg
                     className="absolute -z-10"
                     width="246"
@@ -37,18 +43,18 @@ export default function Hero() {
                       fillRule="nonzero"
                     />
                   </svg>
-                  business
+                  {data.tag}
                 </span>
-              </h1>
-              <p
+              </h1>)}
+              {data.text && ( <div
                 className="text-lg text-blue-200 mb-8"
                 data-aos="fade-up"
                 data-aos-delay="200"
+                data-tina-field={tinaField(data, "text")}
               >
-                Our landing page template works on all devices, so you only
-                <br className="hidden md:block" /> have to set it up once, and
-                get beautiful results forever.
-              </p>
+               <TinaMarkdown content={data.text} />
+
+              </div>)}
 
               {/* Buttons */}
               <div
@@ -86,21 +92,127 @@ export default function Hero() {
             </div>
 
             {/* Image */}
-            <div className="max-w-sm mx-auto md:max-w-none md:absolute md:left-[600px] md:top-0 -mb-12 md:-mt-12 md:mb-0">
+            {data.image &&  (
+             <div className="max-w-sm mx-auto md:max-w-none md:absolute md:left-[600px] md:top-0 -mb-12 md:-mt-12 md:mb-0" data-tina-field={tinaField(data.image,"src")}>
               <div className="relative -ml-3 -mr-24 md:mx-0">
-                <Image
-                  src={HeroImage}
-                  className="md:max-w-none"
-                  width="548"
-                  height="545"
-                  alt="Credit card"
-                  data-aos="fade-up"
-                />
+                
+                <Image src={data.image.src ?? ''} className="md:max-w-none" width={data.image.width || 548} height={data.image.height || 545} alt={data.image.alt ?? 'Default Alt Text'} data-aos={`fade-up`} />
               </div>
-            </div>
+            </div>)}
+           
+
+
+
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+export const heroBlockSchema: TinaTemplate = {
+  name: "hero",
+  label: "Hero",
+  ui: {
+    previewSrc: "/blocks/hero.png",
+    defaultItem: {
+      headline: "Create physical and virtual cards for your",
+      tag: "business",
+      text: "Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.",
+    },
+  },
+  fields: [
+    {
+      type: "string",
+      label: "Headline",
+      name: "headline",
+    },
+      {
+      type: "string",
+      label: "Tag",
+      name: "tag",
+    },
+    {
+      label: "Text",
+      name: "text",
+      type: "rich-text",
+    },
+
+    {
+      type: "object",
+      label: "Image",
+      name: "image",
+      ui:{
+        defaultItem: {
+            src: "blocks/hero.png",
+            alt: "Hero Image",
+            width: 548,
+            height: 545
+        },
+      },
+      fields: [
+        {
+          name: "src",
+          label: "Image Source",
+          type: "image",
+        },
+        {
+          name: "alt",
+          label: "Alt Text",
+          type: "string",
+        },
+        {
+          name: "width",
+          label: "Width",
+          type: "number",
+        },
+        {
+          name: "height",
+          label: "Height",
+          type: "number",
+        }
+      ],
+    },
+    {
+      label: "Actions",
+      name: "actions",
+      type: "object",
+      list: true,
+      ui: {
+        defaultItem: {
+          label: "Action Label",
+          type: "button",
+          icon: true,
+          link: "/",
+        },
+        itemProps: (item) => ({ label: item.label }),
+      },
+      fields: [
+        {
+          label: "Label",
+          name: "label",
+          type: "string",
+        },
+        {
+          label: "Type",
+          name: "type",
+          type: "string",
+          options: [
+            { label: "Button", value: "button" },
+            { label: "Link", value: "link" },
+          ],
+        },
+        {
+          label: "Icon",
+          name: "icon",
+          type: "boolean",
+        },
+        {
+          label: "Link",
+          name: "link",
+          type: "string",
+        },
+      ],
+    }
+  ],
+};

@@ -1,45 +1,37 @@
-import { Collection } from "tinacms";
+import type { Collection } from "tinacms";
+import { heroBlockSchema } from "../../components/blocks/hero";
 
 export const PageCollection: Collection = {
   name: "page",
   label: "Page",
   path: "content/pages",
-  format: "mdx",
+  format: "md",
   ui: {
     router: () => "/",
   },
   fields: [
     {
       type: "string",
-      name: "header",
-      label: "Header",
-    },
-    {
-      type: "object",
-      name: "logo",
-      label: "Logo",
-      fields: [
-        { type: "image", name: "url", label: "URL" },
-        { type: "string", name: "alt", label: "Alt Text" },
-      ],
+      name: "title",
+      label: "Title",
+      description:
+        "The title of the page. This is used to display the title in the CMS",
+      isTitle: true,
+      required: true,
     },
     {
       type: "object",
       list: true,
-      name: "links",
-      label: "Links",
+      name: "blocks",
+      label: "Sections",
       ui: {
-        itemProps: (item) => {
-          return {
-            label: item?.header,
-          };
-        },
+        visualSelector: true,
       },
-      fields: [
-        { type: "string", name: "header" },
-        { type: "string", name: "description" },
-        { type: "string", name: "url" },
+      templates: [
+        heroBlockSchema,
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
       ],
-    },
+    }
   ],
 };
