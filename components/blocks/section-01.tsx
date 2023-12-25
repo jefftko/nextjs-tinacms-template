@@ -113,3 +113,68 @@ export default function Section01() {
     </section>
   );
 }
+
+const defaultFeature = {
+  title: "Here's Another Feature",
+  text: "This is where you might talk about the feature, if this wasn't just filler text.",
+  icon: {
+    color: "",
+    style: "float",
+    name: "",
+  },
+};
+
+export const featureBlockGridSchema = {
+  name: "featuresGrid",
+  label: "Features Grid",
+  ui: {
+    previewSrc: "/blocks/features-grid.png",
+    defaultItem: {
+      items: [defaultFeature, defaultFeature, defaultFeature],
+    },
+  },
+  fields: [
+    {
+      type: "object",
+      label: "Feature Items",
+      name: "items",
+      list: true,
+      ui: {
+        itemProps: (item) => {
+          return {
+            label: item?.title,
+          };
+        },
+        defaultItem: {
+          ...defaultFeature,
+        },
+      },
+      fields: [
+        iconSchema,
+        {
+          type: "string",
+          label: "Title",
+          name: "title",
+        },
+        {
+          type: "string",
+          label: "Text",
+          name: "text",
+          ui: {
+            component: "textarea",
+          },
+        },
+      ],
+    },
+    {
+      type: "string",
+      label: "Color",
+      name: "color",
+      options: [
+        { label: "Default", value: "default" },
+        { label: "Tint", value: "tint" },
+        { label: "Primary", value: "primary" },
+      ],
+    },
+  ],
+};

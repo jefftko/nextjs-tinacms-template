@@ -1,5 +1,6 @@
 import type { Collection } from "tinacms";
 import { heroBlockSchema } from "../../components/blocks/hero";
+import { featureBlockGridSchema } from "../../components/blocks/section-01";
 
 export const PageCollection: Collection = {
   name: "page",
@@ -29,6 +30,7 @@ export const PageCollection: Collection = {
       },
       templates: [
         heroBlockSchema,
+        featureBlockGridSchema,
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
       ],

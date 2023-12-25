@@ -41,9 +41,9 @@ const Block = (block: PageBlocks) => {
     switch (block.__typename) {
               case 'PageBlocksHero':
                 return <Hero data={block} />
-            /*  case 'PageBlocksSection01':
+              case 'PageBlocksSection01':
                 return <Section01 data={block} />
-            case 'PageBlocksSection02':
+            /*case 'PageBlocksSection02':
                 return (
                      <Section02 data={block} />
                     )
