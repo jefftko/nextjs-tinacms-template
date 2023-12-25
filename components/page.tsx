@@ -1,10 +1,10 @@
 "use client";
 
-import React from 'react'
-import type { PageQuery, PageBlocks} from "@/tina/__generated__/types";
+import React from "react";
+import type { PageQuery, PageBlocks } from "@/tina/__generated__/types";
 
 import Hero from "@/components/blocks/hero";
-import Section01 from "@/components/blocks/section-01";
+import { FeatureGrids } from "@/components/blocks/feature-grid";
 import Section02 from "@/components/blocks/section-02";
 import Section03 from "@/components/blocks/section-03";
 import Section04 from "@/components/blocks/section-04";
@@ -14,36 +14,39 @@ import Section07 from "@/components/blocks/section-07";
 
 import { tinaField, useTina } from "tinacms/dist/react";
 
-
 export const PageComponent = (props: {
   data: PageQuery;
   variables: object;
   query: string;
 }) => {
-    const { data } = useTina(props);
-    return ( 
-        <>
-         {data.page.blocks ? data.page.blocks.map(function (block, i) {
-             if (!block) return null
+  const { data } = useTina(props);
+  return (
+    <>
+      {data.page.blocks
+        ? data.page.blocks.map(function (block, i) {
+            if (!block) return null;
             return (
-                <div key={i + block.__typename} data-tina-field={tinaField(block)}>
-                    <Block {...block} />
-                </div>
-                )
+              <div
+                key={i + block.__typename}
+                data-tina-field={tinaField(block)}
+              >
+                <Block {...block} />
+              </div>
+            );
           })
         : null}
     </>
-  )
-}
+  );
+};
 
 const Block = (block: PageBlocks) => {
-    console.log('blockname',block.__typename)
-    switch (block.__typename) {
-              case 'PageBlocksHero':
-                return <Hero data={block} />
-              case 'PageBlocksSection01':
-                return <Section01 data={block} />
-            /*case 'PageBlocksSection02':
+  console.log("blockname", block.__typename);
+  switch (block.__typename) {
+    case "PageBlocksHero":
+      return <Hero data={block} />;
+    case "PageBlocksFeatureGrid":
+      return <FeatureGrids data={block} />;
+    /*case 'PageBlocksSection02':
                 return (
                      <Section02 data={block} />
                     )
@@ -67,7 +70,7 @@ const Block = (block: PageBlocks) => {
                 return (
                     <Section07 data={block} />
                     )*/
-            default:
-                return null
-            }
+    default:
+      return null;
+  }
 };

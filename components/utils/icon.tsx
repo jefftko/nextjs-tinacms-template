@@ -1,7 +1,7 @@
 import * as React from "react";
+import { useTheme } from "../ui";
 import { ColorPickerInput } from "../../tina/fields/color";
 import { IconPickerInput } from "../../tina/fields/icon";
-import { useTheme } from "../ui";
 import * as BoxIcons from "react-icons/bi";
 
 export const IconOptions = {
@@ -82,13 +82,12 @@ export const Icon = ({
   className = "",
   tinaField = "",
 }) => {
+  const theme = useTheme();
   if (IconOptions[data.name] === null || IconOptions[data.name] === undefined) {
     return null;
   }
 
   const { name, color, size = "medium", style = "regular" } = data;
-
-  const theme = useTheme();
 
   const IconSVG = IconOptions[name];
 

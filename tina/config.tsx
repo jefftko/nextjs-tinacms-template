@@ -26,6 +26,6 @@ export default defineConfig({
     },
   },
   schema: {
-    collections: [Global,TinaUserCollection, PageCollection],
+    collections: [Global, TinaUserCollection, PageCollection],
   },
 });
