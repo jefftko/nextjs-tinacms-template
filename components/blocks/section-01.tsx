@@ -1,4 +1,18 @@
-export default function Section01() {
+import { Icon } from "../utils/icon";
+import { iconSchema } from "../utils/icon";
+import {
+  PageBlocksFeaturesGrid,
+  PageBlocksFeaturesGridItems,
+} from "../../tina/__generated__/types";
+
+
+export default function Section01({
+  featuresColor,
+  data,
+}: {
+  featuresColor: string;
+  data: PageBlocksFeaturesGridItems;
+}) {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
