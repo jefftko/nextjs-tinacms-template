@@ -8,7 +8,14 @@ export const PageCollection: Collection = {
   path: "content/pages",
   format: "md",
   ui: {
-    router: () => "/",
+     router:({document}) => {
+      if (document._sys.filename === "home") {
+        return `/`;
+      }else{
+          return undefined;
+          //return `/${document._sys.filename}`;
+      }
+    },
   },
   fields: [
     {

@@ -1,12 +1,11 @@
 ---
 title: Home
 blocks:
-  - headline: Create physical and virtual cards for your
-    tag: business
-    text: |
-      Our landing page template works on all devices, so **you only**
-
-      have to set it up once, and get beautiful results forever.
+  - headline: 'No Code Is '
+    tag: Coding
+    text: >
+      We revolutionize development through asset atomization combined with AI,
+      enabling swift and efficient coding without the code.
     image:
       src: /uploads/hero-image.png
       alt: hero image 1
@@ -15,24 +14,24 @@ blocks:
     _template: hero
   - items:
       - icon:
-          name: ""
-          color: ""
+          name: ''
+          color: ''
           style: float
         title: Here's Another Feature
         text: >-
           This is where you might talk about the feature, if this wasn't just
           filler text.
       - icon:
-          name: ""
-          color: ""
+          name: ''
+          color: ''
           style: float
         title: Here's Another Feature
         text: >-
           This is where you might talk about the feature, if this wasn't just
           filler text.
       - icon:
-          name: ""
-          color: ""
+          name: ''
+          color: ''
           style: float
         title: Here's Another Feature
         text: >-
@@ -40,3 +39,4 @@ blocks:
           filler text.
     _template: featureGrid
 ---
+

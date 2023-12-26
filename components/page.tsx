@@ -46,7 +46,7 @@ const Block = (block: PageBlocks) => {
       return <Hero data={block} />;
     case "PageBlocksFeatureGrid":
       return <FeatureGrids data={block} />;
-    /*case 'PageBlocksSection02':
+   /* case 'PageBlocksSection02':
                 return (
                      <Section02 data={block} />
                     )
