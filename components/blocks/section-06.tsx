@@ -2,10 +2,10 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import Testimonial01 from "@/public/images/testimonial-01.jpg";
-import TestimonialSign01 from "@/public/images/testimonial-sign-01.svg";
-import Testimonial02 from "@/public/images/testimonial-02.jpg";
 import TestimonialSign02 from "@/public/images/testimonial-sign-02.svg";
+import type { TinaTemplate } from "tinacms";
+import { PageBlocksSection06 } from "@/tina/__generated__/types";
+
 
 // Import Swiper
 import Swiper, { Pagination, EffectFade } from "swiper";
@@ -14,7 +14,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 Swiper.use([Pagination, EffectFade]);
 
-export default function Section06() {
+export default function Section06({data}:{data:PageBlocksSection06}) {
   useEffect(() => {
     const testimonial = new Swiper(".testimonial-carousel", {
       slidesPerView: 1,
@@ -170,7 +170,7 @@ export default function Section06() {
                       <div className="swiper-slide flex flex-col h-auto shadow-2xl text-left">
                         <div className="relative after:absolute after:inset-0 after:bg-gradient-to-t after:from-slate-700">
                           <Image
-                            src={Testimonial01}
+                            src={`/images/testimonial-01.jpg`}
                             className="md:max-w-none"
                             width={384}
                             height={180}
@@ -180,8 +180,10 @@ export default function Section06() {
                         <div className="grow flex flex-col relative bg-gradient-to-t from-slate-800 to-slate-700 p-6 pt-14">
                           <Image
                             className="absolute bottom-full translate-y-1/2"
-                            src={TestimonialSign01}
+                            src={`/images/testimonial-sign-01.svg`}
                             alt="Testiomonial sign 01"
+                            width={64}
+                            height={64}
                           />
                           <p className="grow font-medium text-slate-200 mb-4">
                             “ This card is awesome. The app lets me link foreign
@@ -206,7 +208,7 @@ export default function Section06() {
                       <div className="swiper-slide flex flex-col h-auto shadow-2xl text-left">
                         <div className="relative after:absolute after:inset-0 after:bg-gradient-to-t after:from-slate-700">
                           <Image
-                            src={Testimonial02}
+                            src={`/images/testimonial-02.jpg`}
                             className="md:max-w-none"
                             width={384}
                             height={180}
@@ -216,7 +218,9 @@ export default function Section06() {
                         <div className="grow flex flex-col relative bg-gradient-to-t from-slate-800 to-slate-700 p-6 pt-14">
                           <Image
                             className="absolute bottom-full translate-y-1/2"
-                            src={TestimonialSign02}
+                            src={`/images/testimonial-sign-02.svg`}
+                            width={64}
+                            height={64}
                             alt="Testiomonial sign 02"
                           />
                           <p className="grow font-medium text-slate-200 mb-4">
@@ -250,3 +254,20 @@ export default function Section06() {
     </section>
   );
 }
+
+export const section06BlockSchema: TinaTemplate = {
+label: "Section 06",
+  name: "section06",
+  ui: {
+      previewSrc:"/blocks/section-06.png",
+      defaultItem: {
+      }
+  },
+  fields: [
+      {
+      type: "string",
+      label: "Title",
+      name: "title",
+    }
+  ],
+};

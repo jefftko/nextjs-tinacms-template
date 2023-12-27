@@ -1,8 +1,9 @@
 import Image from "next/image";
-import QuoteAuthor from "@/public/images/quote-author-02.jpg";
-import Features from "@/public/images/features-03.png";
+import type { TinaTemplate } from "tinacms";
+import { PageBlocksSection03 } from "@/tina/__generated__/types";
 
-export default function Section03() {
+
+export default function Section03({data}:{data:PageBlocksSection03}) {
   return (
     <section className="mt-12 md:mt-20" data-aos-id-3>
       <div className="relative max-w-7xl mx-auto">
@@ -74,7 +75,7 @@ export default function Section03() {
                 >
                   <Image
                     className="rounded-full self-start shrink-0 mr-3"
-                    src={QuoteAuthor}
+                    src={`/images/quote-author-02.jpg`}
                     width={32}
                     height={32}
                     alt="Quote author 02"
@@ -93,7 +94,7 @@ export default function Section03() {
               <div className="w-full max-w-sm md:max-w-none md:mr-8 mt-8 md:mt-0">
                 <div className="relative -mx-8 md:mx-0">
                   <Image
-                    src={Features}
+                    src={`/images/features-03.png`}
                     className="md:max-w-none"
                     width={496}
                     height={496}
@@ -110,3 +111,20 @@ export default function Section03() {
     </section>
   );
 }
+
+export const section03BlockSchema: TinaTemplate = {
+label: "Section 03",
+  name: "section03",
+  ui: {
+      previewSrc:"/blocks/section-03.png",
+      defaultItem: {
+      }
+  },
+  fields: [
+      {
+      type: "string",
+      label: "Title",
+      name: "title",
+    }
+  ],
+};

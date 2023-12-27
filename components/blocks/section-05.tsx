@@ -1,8 +1,9 @@
 import Image from "next/image";
-import LogosIllustration from "@/public/images/logos-illustration.svg";
-import Logos from "@/public/images/logos.png";
+import type { TinaTemplate } from "tinacms";
+import { PageBlocksSection05 } from "@/tina/__generated__/types";
 
-export default function Section05() {
+
+export default function Section05({data}:{data:PageBlocksSection05}) {
   return (
     <section>
       <div className="relative max-w-7xl mx-auto">
@@ -37,13 +38,13 @@ export default function Section05() {
                 <div className="relative">
                   <Image
                     className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none -z-10 max-w-none mix-blend-lighten"
-                    src={`images/logos-illustration.svg`}
+                    src={`/images/logos-illustration.svg`}
                     alt="Logos illustration"
                     aria-hidden="true"
                     width={594}
                     height={639}
                   />
-                  <Image src={Logos} width={720} height={283} alt="Logos" />
+                  <Image src={`/images/logos.png`} width={720} height={283} alt="Logos" />
                 </div>
               </div>
 
@@ -108,3 +109,20 @@ export default function Section05() {
     </section>
   );
 }
+
+export const section05BlockSchema: TinaTemplate = {
+label: "Section 05",
+  name: "section05",
+  ui: {
+      previewSrc:"/blocks/section-05.png",
+      defaultItem: {
+      }
+  },
+  fields: [
+      {
+      type: "string",
+      label: "Title",
+      name: "title",
+    }
+  ],
+};

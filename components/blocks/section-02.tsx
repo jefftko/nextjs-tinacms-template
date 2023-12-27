@@ -1,9 +1,9 @@
 import Image from "next/image";
-import QuoteAuthor from "@/public/images/quote-author-01.jpg";
-import CardsIllustration from "@/public/images/cards-illustration.svg";
-import Features from "@/public/images/features-02.png";
+import type { TinaTemplate } from "tinacms";
+import { PageBlocksSection02 } from "@/tina/__generated__/types";
 
-export default function Section02() {
+
+export default function Section02({data}:{data:PageBlocksSection02}) {
   return (
     <section data-aos-id-2="">
       <div className="relative max-w-7xl mx-auto">
@@ -75,7 +75,7 @@ export default function Section02() {
                 >
                   <Image
                     className="rounded-full self-start shrink-0 mr-3"
-                    src={QuoteAuthor}
+                    src={`/images/quote-author-01.jpg`}
                     width={32}
                     height={32}
                     alt="Quote author 01"
@@ -95,7 +95,7 @@ export default function Section02() {
                 <div className="relative -mx-16 md:mx-0">
                   <Image
                     className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 mt-16 md:mt-0 pointer-events-none -z-10 max-w-none mix-blend-lighten"
-                    src={`images/cards-illustration.svg`}
+                    src={`/images/cards-illustration.svg`}
                     height={742}
                     width={752}
                     alt="Cards illustration"
@@ -103,9 +103,10 @@ export default function Section02() {
                   />
                   <div data-aos="fade-up" data-aos-anchor="[data-aos-id-2]">
                     <Image
-                      src={Features}
+                      src={`/images/features-02.png`}
                       className="md:max-w-none md:rotate-[48deg]"
                       width={775}
+                      height={450}
                       alt="Features 01"
                     />
                   </div>
@@ -118,3 +119,20 @@ export default function Section02() {
     </section>
   );
 }
+
+export const section02BlockSchema: TinaTemplate = {
+  label: "Section 02",
+  name: "section02",
+  ui: {
+      previewSrc:"/blocks/section-02.png",
+      defaultItem: {
+      }
+  },
+  fields: [
+      {
+      type: "string",
+      label: "Title",
+      name: "title",
+    }
+  ],
+};

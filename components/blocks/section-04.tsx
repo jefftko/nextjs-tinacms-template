@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Features from "@/public/images/features-04.png";
+import type { TinaTemplate } from "tinacms";
+import { PageBlocksSection04 } from "@/tina/__generated__/types";
 
-export default function Section04() {
+export default function Section04({data}:{data:PageBlocksSection04}) {
   return (
     <section className="mt-6" data-aos-id-4>
       <div className="relative max-w-7xl mx-auto">
@@ -413,7 +414,7 @@ export default function Section04() {
               <div className="w-full max-w-sm md:max-w-none md:ml-8 mt-8 md:mt-0">
                 <div className="relative -mx-8 md:mx-0">
                   <Image
-                    src={Features}
+                    src={`/images/features-04.png`}
                     className="md:max-w-none ml-auto"
                     width={496}
                     height={496}
@@ -430,3 +431,20 @@ export default function Section04() {
     </section>
   );
 }
+
+export const section04BlockSchema: TinaTemplate = {
+label: "Section 04",
+  name: "section04",
+  ui: {
+      previewSrc:"/blocks/section-04.png",
+      defaultItem: {
+      }
+  },
+  fields: [
+      {
+      type: "string",
+      label: "Title",
+      name: "title",
+    }
+  ],
+};

@@ -1,10 +1,8 @@
 import Image from "next/image";
-import Pricing01 from "@/public/images/pricing-01.png";
-import Pricing02 from "@/public/images/pricing-02.png";
-import Pricing03 from "@/public/images/pricing-03.png";
-import Pricing04 from "@/public/images/pricing-04.png";
+import type { TinaTemplate } from "tinacms";
+import { PageBlocksSection07 } from "@/tina/__generated__/types";
 
-export default function Section07() {
+export default function Section07({data}:{data:PageBlocksSection07}) {
   return (
     <section>
       <div className="relative max-w-7xl mx-auto">
@@ -47,7 +45,7 @@ export default function Section07() {
                     </div>
                     <Image
                       className="w-full rounded-lg"
-                      src={Pricing01}
+                      src={`/images/pricing-01.png`}
                       width={210}
                       height={124}
                       alt="Starter"
@@ -132,7 +130,7 @@ export default function Section07() {
                     </div>
                     <Image
                       className="w-full rounded-lg"
-                      src={Pricing02}
+                      src={`/images/pricing-02.png`}
                       width={210}
                       height={124}
                       alt="Smart"
@@ -234,7 +232,7 @@ export default function Section07() {
                     </div>
                     <Image
                       className="w-full rounded-lg"
-                      src={Pricing03}
+                      src={`/images/pricing-03.png`}
                       width={210}
                       height={124}
                       alt="You"
@@ -318,7 +316,7 @@ export default function Section07() {
                     </div>
                     <Image
                       className="w-full rounded-lg"
-                      src={Pricing04}
+                      src={`/images/pricing-04.png`}
                       width={210}
                       height={124}
                       alt="Black"
@@ -399,3 +397,20 @@ export default function Section07() {
     </section>
   );
 }
+
+export const section07BlockSchema: TinaTemplate = {
+label: "Section 07",
+  name: "section07",
+  ui: {
+      previewSrc:"/blocks/section-07.png",
+      defaultItem: {
+      }
+  },
+  fields: [
+      {
+      type: "string",
+      label: "Title",
+      name: "title",
+    }
+  ],
+};

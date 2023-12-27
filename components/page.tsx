@@ -40,13 +40,13 @@ export const PageComponent = (props: {
 };
 
 const Block = (block: PageBlocks) => {
-  console.log("blockname", block.__typename);
+  //console.log("blockname", block.__typename);
   switch (block.__typename) {
     case "PageBlocksHero":
       return <Hero data={block} />;
     case "PageBlocksFeatureGrid":
       return <FeatureGrids data={block} />;
-   /* case 'PageBlocksSection02':
+    case 'PageBlocksSection02':
                 return (
                      <Section02 data={block} />
                     )
@@ -69,7 +69,7 @@ const Block = (block: PageBlocks) => {
             case 'PageBlocksSection07':
                 return (
                     <Section07 data={block} />
-                    )*/
+                    )
     default:
       return null;
   }
