@@ -12,9 +12,9 @@ export default async function Home(
   //const { params } =props;
   const res = await client.queries.page({ relativePath: `${props.params.file_name}.md` });
   console.log("Home", props);
-  if(!res.data?.page) {
+  /*if(!res.data?.page) {
     return notFound();
-  }
+  }*/
   return (
     <PageComponent
       data={JSON.parse(JSON.stringify(res.data))}
