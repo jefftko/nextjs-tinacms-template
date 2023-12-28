@@ -25,6 +25,7 @@
     "tailwindcss": "^3.3.5"
   },
   "dependencies": {
+    "@tinacms/auth": "^1.0.4",
     "@tinacms/cli": "^1.5.34",
     "@tinacms/datalayer": "^1.2.29",
     "aos": "^2.3.4",
@@ -34,7 +35,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "swiper": "8.4.7",
-    "tinacms": "^1.5.24",
+    "tinacms": "^1.5.28",
     "tinacms-authjs": "^1.0.1",
     "tinacms-gitprovider-github": "^1.0.0",
     "typescript": "5.0.4",
