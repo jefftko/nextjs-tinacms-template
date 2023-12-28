@@ -18,17 +18,21 @@ export default createMediaHandler({
     region: process.env.S3_REGION,
   },
   bucket: process.env.S3_BUCKET || '',
-  authorized: async (req, _res) => {
+  authorized: async (req, _res): Promise<boolean> => {
     if (process.env.NODE_ENV === 'development') {
       return true
     }
     try {
       const user = await isAuthorized(req)
-
-      return user && user.verified
+      if ( user && user.verified ) {
+          return true
+        }else{
+          return false
+        }
     } catch (e) {
       console.error(e)
       return false
     }
+    return false
   },
 })
