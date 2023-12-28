@@ -19,11 +19,15 @@ export default defineConfig({
     outputFolder: "admin",
   },
   media: {
-    tina: {
+      loadCustomStore: async () => {
+      const pack = await import('next-tinacms-s3')
+      return pack.TinaCloudS3MediaStore
+    },
+    /*tina: {
       mediaRoot: "uploads",
       publicFolder: "public",
       static: true,
-    },
+    },*/
   },
   schema: {
     collections: [Global, TinaUserCollection, PageCollection],
