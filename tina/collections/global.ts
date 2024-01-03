@@ -16,6 +16,24 @@ const Global: Collection = {
       label: "Header",
       name: "header",
       fields: [
+           {
+      type: "object",
+      label: "Logo",
+      name: "image",
+      ui: {
+        defaultItem: {
+          src: "images/logo.png",
+        },
+      },
+      fields: [
+        {
+          name: "src",
+          label: "Image Source",
+          type: "image",
+        },
+      ],
+    },
+
         iconSchema as any,
         {
           type: "string",

@@ -1,5 +1,8 @@
 {
   "header": {
+    "image": {
+      "src": "https://tinacms-template.s3.us-west-1.amazonaws.com/logo_aimx.png"
+    },
     "icon": {
       "name": "BiAlarmExclamation",
       "color": "green",
