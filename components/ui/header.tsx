@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { tinaField } from "tinacms/dist/react";
+import { GlobalHeader } from "../../tina/__generated__/types";
 
 export default function Header() {
   return (
@@ -12,8 +14,8 @@ export default function Header() {
             <Link className="block" href="/" aria-label="Cruip">
                <Image
                     src={`/images/logo.png`}
-                    width={30}
-                    height={30}
+                    width={130}
+                    height={130}
                     alt="logo"
                   /> 
                   </Link>

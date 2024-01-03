@@ -17,11 +17,13 @@ export default async function Home(
     return notFound();
   }
   return (
+      <>
     <PageComponent
       data={JSON.parse(JSON.stringify(res.data))}
       query={res.query}
       variables={res.variables}
     />
+    </>
   );
 }
 
