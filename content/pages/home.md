@@ -17,7 +17,7 @@ blocks:
           name: BiAddToQueue
           color: blue
           style: float
-        title: Here's Another Feature
+        title: code is coding
         text: >-
           This is where you might talk about the feature, if this wasn't just
           filler text.
