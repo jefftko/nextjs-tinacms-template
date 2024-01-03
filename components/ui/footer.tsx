@@ -30,12 +30,11 @@ export default function Footer() {
             {/* Logo */}
             <Link className="block" href="/" aria-label="Cruip">
               <Image
-                    src={`/images/logo.png`}
-                    width={30}
-                    height={30}
-                    alt="logo"
-                  /> 
-           
+                src={`/images/logo.png`}
+                width={30}
+                height={30}
+                alt="logo"
+              />
             </Link>
           </div>
 

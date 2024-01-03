@@ -1,12 +1,10 @@
 {
   "header": {
-    "image": {
-      "src": "https://tinacms-template.s3.us-west-1.amazonaws.com/logo_aimx.png"
-    },
-    "icon": {
-      "name": "BiAlarmExclamation",
-      "color": "green",
-      "style": "float"
+    "logo": {
+      "src": "https://tinacms-template.s3.us-west-1.amazonaws.com/logo_aimx.png",
+      "alt": "test",
+      "width": 130,
+      "height": 130
     },
     "name": "Nantronix",
     "color": "default",

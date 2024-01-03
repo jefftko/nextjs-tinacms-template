@@ -2,8 +2,7 @@ import Image from "next/image";
 import type { TinaTemplate } from "tinacms";
 import { PageBlocksSection03 } from "@/tina/__generated__/types";
 
-
-export default function Section03({data}:{data:PageBlocksSection03}) {
+export default function Section03({ data }: { data: PageBlocksSection03 }) {
   return (
     <section className="mt-12 md:mt-20" data-aos-id-3>
       <div className="relative max-w-7xl mx-auto">
@@ -113,18 +112,17 @@ export default function Section03({data}:{data:PageBlocksSection03}) {
 }
 
 export const section03BlockSchema: TinaTemplate = {
-label: "Section 03",
+  label: "Section 03",
   name: "section03",
   ui: {
-      previewSrc:"/blocks/section-03.png",
-      defaultItem: {
-      }
+    previewSrc: "/blocks/section-03.png",
+    defaultItem: {},
   },
   fields: [
-      {
+    {
       type: "string",
       label: "Title",
       name: "title",
-    }
+    },
   ],
 };

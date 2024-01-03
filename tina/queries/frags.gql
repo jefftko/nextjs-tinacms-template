@@ -1,5 +1,5 @@
 fragment LayoutQueryFragment on Query {
-  global(relativePath:"index.json") {
+  global(relativePath: "index.json") {
     ...GlobalParts
   }
 }

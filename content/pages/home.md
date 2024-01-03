@@ -1,7 +1,7 @@
 ---
 title: Home
 blocks:
-  - headline: 'No Code Is '
+  - headline: "No Code Is "
     tag: Coding
     text: >
       We revolutionize development through asset atomization combined with AI,
@@ -14,8 +14,8 @@ blocks:
     _template: hero
   - items:
       - icon:
-          name: ''
-          color: ''
+          name: ""
+          color: ""
           style: float
         title: Here's Another Feature
         text: >-
@@ -30,8 +30,8 @@ blocks:
           This is where you might talk about the feature, if this wasn't just
           filler text.
       - icon:
-          name: ''
-          color: ''
+          name: ""
+          color: ""
           style: float
         title: Here's Another Feature
         text: >-
@@ -46,4 +46,3 @@ blocks:
   - _template: section06
   - _template: section07
 ---
-

@@ -1,25 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
 import { tinaField } from "tinacms/dist/react";
-import { GlobalHeader } from "../../tina/__generated__/types";
+import { GlobalHeader } from "@/tina/__generated__/types";
 
-export default function Header() {
+export default function Header({ data }: { data: GlobalHeader }) {
   return (
     <header className="absolute w-full z-30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Site branding */}
-          <div className="shrink-0 mr-4">
-            {/* Logo */}
-            <Link className="block" href="/" aria-label="Cruip">
-               <Image
-                    src={`/images/logo.png`}
-                    width={130}
-                    height={130}
-                    alt="logo"
-                  /> 
-                  </Link>
-          </div>
+          {data.logo && (
+            <div className="shrink-0 mr-4">
+              {/* Logo */}
+              <Link
+                className="block"
+                href="/"
+                aria-label="Cruip"
+                data-tina-field={tinaField(data, "logo")}
+              >
+                <Image
+                  src={data.logo.src ?? ""}
+                  width={data.logo.width || 130}
+                  height={data.logo.height || 130}
+                  alt={data.logo.alt ?? "Logo"}
+                />
+              </Link>
+            </div>
+          )}
 
           {/* Desktop navigation */}
           <nav className="flex grow">

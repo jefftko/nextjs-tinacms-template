@@ -7,7 +7,6 @@ import "./css/style.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 import localFont from "next/font/local";
 
 const aspekta = localFont({
@@ -51,7 +50,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
- useEffect(() => {
+  useEffect(() => {
     AOS.init({
       once: true,
       disable: "phone",

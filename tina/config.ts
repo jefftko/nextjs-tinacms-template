@@ -19,9 +19,9 @@ export default defineConfig({
     outputFolder: "admin",
   },
   media: {
-      loadCustomStore: async () => {
-      const pack = await import('next-tinacms-s3')
-      return pack.TinaCloudS3MediaStore
+    loadCustomStore: async () => {
+      const pack = await import("next-tinacms-s3");
+      return pack.TinaCloudS3MediaStore;
     },
     /*tina: {
       mediaRoot: "uploads",

@@ -6,7 +6,6 @@ import TestimonialSign02 from "@/public/images/testimonial-sign-02.svg";
 import type { TinaTemplate } from "tinacms";
 import { PageBlocksSection06 } from "@/tina/__generated__/types";
 
-
 // Import Swiper
 import Swiper, { Pagination, EffectFade } from "swiper";
 import "swiper/swiper.min.css";
@@ -14,7 +13,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 Swiper.use([Pagination, EffectFade]);
 
-export default function Section06({data}:{data:PageBlocksSection06}) {
+export default function Section06({ data }: { data: PageBlocksSection06 }) {
   useEffect(() => {
     const testimonial = new Swiper(".testimonial-carousel", {
       slidesPerView: 1,
@@ -256,18 +255,17 @@ export default function Section06({data}:{data:PageBlocksSection06}) {
 }
 
 export const section06BlockSchema: TinaTemplate = {
-label: "Section 06",
+  label: "Section 06",
   name: "section06",
   ui: {
-      previewSrc:"/blocks/section-06.png",
-      defaultItem: {
-      }
+    previewSrc: "/blocks/section-06.png",
+    defaultItem: {},
   },
   fields: [
-      {
+    {
       type: "string",
       label: "Title",
       name: "title",
-    }
+    },
   ],
 };

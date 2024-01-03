@@ -46,30 +46,18 @@ const Block = (block: PageBlocks) => {
       return <Hero data={block} />;
     case "PageBlocksFeatureGrid":
       return <FeatureGrids data={block} />;
-    case 'PageBlocksSection02':
-                return (
-                     <Section02 data={block} />
-                    )
-            case 'PageBlocksSection03':
-                return (
-                     <Section03 data={block} />
-                    )
-            case 'PageBlocksSection04':
-                return (
-                    <Section04 data={block} />
-                    )
-            case 'PageBlocksSection05':
-                return (
-                    <Section05 data={block} />
-                    )
-            case 'PageBlocksSection06':
-                return (
-                    <Section06 data={block} />
-                    )
-            case 'PageBlocksSection07':
-                return (
-                    <Section07 data={block} />
-                    )
+    case "PageBlocksSection02":
+      return <Section02 data={block} />;
+    case "PageBlocksSection03":
+      return <Section03 data={block} />;
+    case "PageBlocksSection04":
+      return <Section04 data={block} />;
+    case "PageBlocksSection05":
+      return <Section05 data={block} />;
+    case "PageBlocksSection06":
+      return <Section06 data={block} />;
+    case "PageBlocksSection07":
+      return <Section07 data={block} />;
     default:
       return null;
   }
