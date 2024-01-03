@@ -14,17 +14,17 @@ blocks:
     _template: hero
   - items:
       - icon:
+          name: ''
+          color: ''
+          style: float
+        title: Here's Another Feature
+        text: >-
+          This is where you might talk about the feature, if this wasn't just
+          filler text.
+      - icon:
           name: BiAddToQueue
           color: blue
           style: float
-        title: code is coding
-        text: >-
-          This is where you might talk about the feature, if this wasn't just
-          filler text.
-      - icon:
-          name: ''
-          color: ''
-          style: float
         title: Here's Another Feature
         text: >-
           This is where you might talk about the feature, if this wasn't just
@@ -37,6 +37,7 @@ blocks:
         text: >-
           This is where you might talk about the feature, if this wasn't just
           filler text.
+    color: primary
     _template: featureGrid
   - _template: section02
   - _template: section03
