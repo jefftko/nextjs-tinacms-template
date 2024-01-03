@@ -22,8 +22,8 @@ blocks:
           This is where you might talk about the feature, if this wasn't just
           filler text.
       - icon:
-          name: ''
-          color: ''
+          name: BiAddToQueue
+          color: blue
           style: float
         title: Here's Another Feature
         text: >-
@@ -37,6 +37,7 @@ blocks:
         text: >-
           This is where you might talk about the feature, if this wasn't just
           filler text.
+    color: primary
     _template: featureGrid
   - _template: section02
   - _template: section03
