@@ -14,8 +14,8 @@ blocks:
     _template: hero
   - items:
       - icon:
-          name: ''
-          color: ''
+          name: BiAddToQueue
+          color: blue
           style: float
         title: Here's Another Feature
         text: >-
