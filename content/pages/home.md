@@ -1,7 +1,8 @@
 ---
 title: Tina Cloud Starter
 blocks:
-  - headline: Welcome to the Tina Starter
+  - tagline: ''
+    headline: 块，还能更快！
     text: >
       This project is set up to show you the basics of working with Tina. You're
       looking at the landing page, which pulls content from
@@ -27,7 +28,7 @@ blocks:
   - items:
       - icon:
           name: BiCodeBlock
-          color: red
+          color: pink
           style: float
         title: Amazing Feature
         text: >-
@@ -35,7 +36,7 @@ blocks:
           Praesent ac faucibus risus, eu lacinia enim.
       - icon:
           name: BiLike
-          color: primary
+          color: blue
           style: float
         title: This Is a Feature
         text: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
@@ -56,6 +57,4 @@ blocks:
     color: primary
     _template: testimonial
 ---
-
-
 
