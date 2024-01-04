@@ -24,7 +24,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.vercel
 
-# local swp files
-*.swp
+.tina/__generated__
+node_modules

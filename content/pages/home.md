@@ -1,48 +1,61 @@
 ---
-title: Home
+title: Tina Cloud Starter
 blocks:
-  - headline: "No Code Is "
-    tag: Coding
+  - headline: Welcome to the Tina Starter
     text: >
-      We revolutionize development through asset atomization combined with AI,
-      enabling swift and efficient coding without the code.
+      This project is set up to show you the basics of working with Tina. You're
+      looking at the landing page, which pulls content from
+      `content/pages/home.md`, components from components/blocks, and puts them
+      all together in `pages/[filename].tsx`, all based on a config
+      `tina/config.tsx`.
+    actions:
+      - label: Get Started
+        type: button
+        icon: true
+        link: /posts
+      - label: Read Blog
+        type: link
+        icon: false
+        link: /posts
     image:
-      src: /uploads/hero_home.png
-      alt: hero image
-      width: 548
-      height: 534
+      src: /uploads/unsplash-75EFpyXu3Wg.jpg
+      alt: >-
+        Photo of palm trees at sunset by Adam Birkett -
+        unsplash.com/photos/75EFpyXu3Wg
+    color: default
     _template: hero
   - items:
       - icon:
-          name: ""
-          color: ""
+          name: BiCodeBlock
+          color: red
           style: float
-        title: Here's Another Feature
+        title: Amazing Feature
         text: >-
-          This is where you might talk about the feature, if this wasn't just
-          filler text.
+          Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
+          Praesent ac faucibus risus, eu lacinia enim.
       - icon:
-          name: BiAddToQueue
-          color: blue
+          name: BiLike
+          color: primary
           style: float
-        title: Here's Another Feature
-        text: >-
-          This is where you might talk about the feature, if this wasn't just
-          filler text.
+        title: This Is a Feature
+        text: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
       - icon:
-          name: ""
-          color: ""
+          name: BiPalette
+          color: green
           style: float
-        title: Here's Another Feature
+        title: Configurable Theme
         text: >-
-          This is where you might talk about the feature, if this wasn't just
-          filler text.
+          Edit global theme configuration with Tina. Change your theme's primary
+          color, font, or icon set.
+    color: tint
+    _template: features
+  - quote: >-
+      There are only two hard things in Computer Science: cache invalidation and
+      naming things.
+    author: Phil Karlton
     color: primary
-    _template: featureGrid
-  - _template: section02
-  - _template: section03
-  - _template: section04
-  - _template: section05
-  - _template: section06
-  - _template: section07
+    _template: testimonial
 ---
+
+
+

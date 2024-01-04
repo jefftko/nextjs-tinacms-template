@@ -1,24 +1,14 @@
-import {
-  UsernamePasswordAuthJSProvider,
-  TinaUserCollection,
-} from "tinacms-authjs/dist/tinacms";
+import { UsernamePasswordAuthJSProvider, TinaUserCollection } from "tinacms-authjs/dist/tinacms";
 import { defineConfig, LocalAuthProvider } from "tinacms";
-
-import { PageCollection } from "./collections/page";
-import Global from "./collections/global";
-
+import Post from "./collection/post";
+import Global from "./collection/global";
+import Author from "./collection/author";
+import Page from "./collection/page";
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
-
-export default defineConfig({
-  authProvider: isLocal
-    ? new LocalAuthProvider()
-    : new UsernamePasswordAuthJSProvider(),
-  contentApiUrlOverride: "/api/tina/gql",
-  build: {
-    publicFolder: "public",
-    outputFolder: "admin",
-  },
-  media: {
+const config = defineConfig({
+    contentApiUrlOverride: "/api/tina/gql",
+    authProvider: isLocal ? new LocalAuthProvider() : new UsernamePasswordAuthJSProvider(),
+    media: {
     loadCustomStore: async () => {
       const pack = await import("next-tinacms-s3");
       return pack.TinaCloudS3MediaStore;
@@ -29,7 +19,18 @@ export default defineConfig({
       static: true,
     },*/
   },
-  schema: {
-    collections: [Global, TinaUserCollection, PageCollection],
-  },
+    build: {
+        publicFolder: "public",
+        outputFolder: "admin", // within the public folder
+    },
+    schema: {
+        collections: [
+            TinaUserCollection,
+            Post,
+            Global,
+            Author,
+            Page
+        ]
+    }
 });
+export default config;
