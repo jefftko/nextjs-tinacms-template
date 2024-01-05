@@ -1,6 +1,10 @@
 ---
 title: Tina Cloud Starter
 blocks:
+  - headline: Create physical and virtual cards for your
+    tag: business
+    text: ''
+    _template: banner
   - tagline: ''
     headline: 块，还能更快！
     text: >

@@ -1,5 +1,11 @@
 {
   "header": {
+    "image": {
+      "src": "https://tinacms-template.s3.us-west-1.amazonaws.com/logo_aimx.png",
+      "alt": "aimx",
+      "width": 130,
+      "height": 130
+    },
     "icon": {
       "name": "BiUpload",
       "color": "blue",
