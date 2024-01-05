@@ -6,6 +6,10 @@ import { Theme } from "./theme";
 import layoutData from "../../content/global/index.json";
 import { Global } from "../../tina/__generated__/types";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 export const Layout = ({
   rawData = {},
   data = layoutData,
@@ -15,6 +19,15 @@ export const Layout = ({
   data?: Omit<Global, "id" | "_sys" | "_values">;
   children: React.ReactNode;
 }) => {
+
+  React.useEffect(() => {
+    AOS.init({
+      once: true,
+      disable: "phone",
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+  },[]);
   return (
     <>
       <Head>

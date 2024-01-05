@@ -6,6 +6,7 @@
     "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
     "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c \"next dev\"",
     "build": "TINA_PUBLIC_IS_LOCAL=false tinacms build && next build",
+    "build:dev": "TINA_PUBLIC_IS_LOCAL=true tinacms build && next build",
     "start": "tinacms build && next start",
     "export": "npm run build && next export",
     "lint": "eslint . --ext .ts,.tsx",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
     "@tinacms/cli": "^1.5.34",
+    "@types/aos": "^3.0.7",
     "@types/js-cookie": "^3.0.0",
     "@types/node": "^20.10.6",
     "@types/react": "^17.0.35",
@@ -29,9 +31,11 @@
   },
   "dependencies": {
     "@headlessui/react": "1.7.5",
+    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.8",
     "@tinacms/auth": "^1.0.4",
     "@tinacms/datalayer": "^1.2.32",
+    "aos": "^2.3.4",
     "date-fns": "^2.23.0",
     "next": "^13.3.1",
     "next-auth": "^4.24.5",

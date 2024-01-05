@@ -3,12 +3,13 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}","./app/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
   theme: {
     colors: {
       transparent: "transparent",
       current: "currentColor",
+      ...colors,
       black: colors.black,
       white: colors.white,
       teal: colors.cyan,
@@ -225,5 +226,5 @@ module.exports = {
   variants: {
     extend: { typography: ["tint", "dark", "primary"] },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/forms"),require("@tailwindcss/typography")],
 };
