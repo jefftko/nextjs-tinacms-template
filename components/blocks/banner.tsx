@@ -2,10 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import type { TinaTemplate } from "tinacms";
-import { PageBlocksBanner } from "@/tina/__generated__/types";
+import { PageBlocksBanner } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 
-export function Banner({ data }: { data: PageBlocksHero }) {
+export function Banner({ data }: { data: PageBlocksBanner }) {
   return (
     <section className="relative">
       {/* Bg */}

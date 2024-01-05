@@ -3,7 +3,7 @@ import Image from "next/image";
 import { tinaField } from "tinacms/dist/react";
 import type { TinaTemplate } from "tinacms";
 import { iconSchema } from "../util/icon";
-
+import { GlobalHeader } from "../../tina/__generated__/types";
 
 export const Header = ({ data }: { data: GlobalHeader }) => {
   return (
@@ -14,9 +14,9 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
           <div className="shrink-0 mr-4">
             {/* Logo */}
             {data.image && (
-            <Link className="block" href="/" aria-label="Cruip" tinaField={tinaField(data.image, "src")}
->
+            <Link className="block" href="/" aria-label="Cruip">
                <Image
+                    data-tina-field={tinaField(data.image, "src")}
                     src={data.image.src}
                     width={130}
                     height={130}
@@ -55,7 +55,7 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
   );
 }
 
-export const headerBlockSchema: TinaTemplate = {
+export const headerBlockSchema = {
       type: "object",
       label: "Header",
       name: "header",

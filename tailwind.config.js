@@ -162,7 +162,7 @@ module.exports = {
           },
         },
         dark: {
-        /*  css: {
+          css: {
             color: theme("colors.gray.200"),
             '[class~="lead"]': { color: theme("colors.gray.400") },
             a: { color: theme("colors.gray.100") },
@@ -191,7 +191,7 @@ module.exports = {
               borderBottomColor: theme("colors.gray.700"),
             },
             "tbody tr": { borderBottomColor: theme("colors.gray.800") },
-          },*/
+          },
         },
         primary: {
           css: {
