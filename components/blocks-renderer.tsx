@@ -10,7 +10,7 @@ export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
   return (
     <>
       {props.blocks
-        ? props.blocks.map(function (block, i) {
+        ? props.blocks.filter(block => block !== null).map(function (block, i) {
             return (
               <div key={i} data-tina-field={tinaField(block)}>
                 <Block {...block} />

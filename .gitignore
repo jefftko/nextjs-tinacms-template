@@ -27,3 +27,6 @@ yarn-error.log*
 
 .tina/__generated__
 node_modules
+
+#cache
+*.swp
