@@ -1,9 +1,17 @@
 ---
 title: Tina Cloud Starter
 blocks:
-  - headline: Create physical and virtual cards for your
-    tag: business
-    text: ''
+  - headline: 'No Code Is '
+    tag: ' Coding!'
+    text: >
+      Our platform revolutionizes product design and development, blending AI
+      with no-code solutions. It enables product managers to swiftly materialize
+      ideas, assists designers in achieving instant design-to-delivery, and
+      empowers developers with rapid, atomic-level coding. 'Empower, Design,
+      Develop: AI-Driven, No-Code Innovation' encapsulates our commitment to
+      accessible, efficient, and innovative digital creation.
+    image:
+      src: 'https://tinacms-template.s3.us-west-1.amazonaws.com/hero_home.png'
     _template: banner
   - tagline: ''
     headline: 块，还能更快！

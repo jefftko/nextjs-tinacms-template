@@ -56,7 +56,7 @@ export const Layout = ({
       </Head>
       <Theme data={data?.theme}>
         <div
-          className={`min-h-screen flex flex-col ${
+          className={`antialiased text-slate-800 font-[350] overflow-hidden min-h-screen flex flex-col ${
             data.theme.font === "nunito" && "font-nunito"
           } ${data.theme.font === "lato" && "font-lato"} ${
             data.theme.font === "sans" && "font-sans"
