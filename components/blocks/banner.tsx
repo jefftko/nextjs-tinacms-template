@@ -98,13 +98,7 @@ export function Banner({ data }: { data: PageBlocksBanner }) {
 
               {/* Button */}
 
-              {data.actions && (
-            <Actions
-              className="justify-center md:justify-start py-2"
-              parentColor={data.color}
-              actions={data.actions}
-            />
-          )}
+              
             </div>
             
 
@@ -193,47 +187,6 @@ export const bannerBlockSchema: TinaTemplate = {
           name: "height",
           label: "Height",
           type: "number",
-        },
-      ],
-    },
-    {
-      label: "Actions",
-      name: "actions",
-      type: "object",
-      list: true,
-      ui: {
-        defaultItem: {
-          label: "Action Label",
-          type: "button",
-          icon: true,
-          link: "/",
-        },
-        itemProps: (item) => ({ label: item.label }),
-      },
-      fields: [
-        {
-          label: "Label",
-          name: "label",
-          type: "string",
-        },
-        {
-          label: "Type",
-          name: "type",
-          type: "string",
-          options: [
-            { label: "Button", value: "button" },
-            { label: "Link", value: "link" },
-          ],
-        },
-        {
-          label: "Icon",
-          name: "icon",
-          type: "boolean",
-        },
-        {
-          label: "Link",
-          name: "link",
-          type: "string",
         },
       ],
     },
