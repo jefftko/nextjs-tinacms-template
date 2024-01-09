@@ -4,6 +4,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import type { TinaTemplate } from "tinacms";
 import { PageBlocksBanner } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
+import { Actions } from "../util/actions";
 
 export function Banner({ data }: { data: PageBlocksBanner }) {
   return (
@@ -61,7 +62,7 @@ export function Banner({ data }: { data: PageBlocksBanner }) {
               )}
 
               {/* Buttons */}
-              <div
+             {/* <div
                 className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 mb-12 md:mb-0"
                 data-aos="fade-up"
                 data-aos-delay="300"
@@ -92,8 +93,20 @@ export function Banner({ data }: { data: PageBlocksBanner }) {
                     Read documentation
                   </Link>
                 </div>
-              </div>
+
+              </div>*/}
+
+              {/* Button */}
+
+              {data.actions && (
+            <Actions
+              className="justify-center md:justify-start py-2"
+              parentColor={data.color}
+              actions={data.actions}
+            />
+          )}
             </div>
+            
 
             {/* Image */}
             {data.image && (

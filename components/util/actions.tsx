@@ -61,7 +61,10 @@ export const Actions = ({
   };
 
   return (
-    <div className={`flex flex-wrap items-center gap-y-4 gap-x-6 ${className}`}>
+    <div className={`flex flex-wrap items-center gap-y-4 gap-x-6 ${className}`} 
+    data-aos="fade-up"
+    data-aos-delay="300"
+>
       {actions &&
         actions.map(function (action, index) {
           let element = null;

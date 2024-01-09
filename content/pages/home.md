@@ -12,6 +12,15 @@ blocks:
       accessible, efficient, and innovative digital creation.
     image:
       src: 'https://tinacms-template.s3.us-west-1.amazonaws.com/hero_home.png'
+    actions:
+      - label: Get Started
+        type: button
+        icon: true
+        link: /
+      - label: Dead Documentation
+        type: button
+        icon: false
+        link: /
     _template: banner
   - tagline: ''
     headline: 块，还能更快！
