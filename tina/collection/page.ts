@@ -4,6 +4,14 @@ import { contentBlockSchema } from "../../components/blocks/content";
 import { testimonialBlockSchema } from "../../components/blocks/testimonial";
 import { featureBlockSchema } from "../../components/blocks/features";
 import { bannerBlockSchema } from "../../components/blocks/banner";
+import { section02BlockSchema } from "../../components/blocks/section-02";
+import { section03BlockSchema } from "../../components/blocks/section-03";
+import { section04BlockSchema } from "../../components/blocks/section-04";
+import { section05BlockSchema } from "../../components/blocks/section-05";
+import { section06BlockSchema } from "../../components/blocks/section-06";
+import { section07BlockSchema } from "../../components/blocks/section-07";
+
+
 
 const Page: Collection = {
   label: "Pages",
@@ -46,6 +54,12 @@ const Page: Collection = {
         contentBlockSchema,
         testimonialBlockSchema,
         bannerBlockSchema,
+        section02BlockSchema,
+        section03BlockSchema,
+        section04BlockSchema,
+        section05BlockSchema,
+        section06BlockSchema,
+        section07BlockSchema,
       ],
     },
   ],
